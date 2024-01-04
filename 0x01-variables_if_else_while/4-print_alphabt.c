@@ -9,14 +9,15 @@ int main(void)
 {
 	char low = 97;
 
-	for (int i = 97; i <= 122; i++)
+	while (low <= 122)
 	{
-		low = i;
-		if (i == 101 || i == 113)
+		if (low == 101 || low == 113)
 		{
+			low++;
 			continue;
 		}
 		putchar(low);
+		low++;
 	}
 	putchar('\n');
 	return (0);
