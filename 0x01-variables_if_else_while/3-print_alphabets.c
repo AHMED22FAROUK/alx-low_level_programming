@@ -10,19 +10,19 @@
 
 int main(void)
 {
-	char sma = 97;
-	char tall = 65;
-	char nl = 10;
+	char low = 97;
+	char upper = 65;
 
-	for (int i = 65; i <= 90; i++)
+	while (low <= 122)
 	{
-		for (; sma <= 122; sma++)
-		{
-			putchar(sma);
-		}
-		tall = i;
-		putchar(tall);
+		putchar(low);
+		low++;
 	}
-	putchar(nl);
+	while (upper <= 90)
+	{
+		putchar(upper);
+		upper++;
+	}
+	putchar("\n");
 	return (0);
 }
