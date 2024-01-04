@@ -3,7 +3,7 @@
  * main -alphabets in lowwer and upper case
  * Description: this function print using ascii the lower
  * case alphabet using sma variable the upper case using
- *tall variable and the nl variable is for new line
+ * tall variable and the nl variable is for new line
  *
  * Return: return 0 if success
  */
