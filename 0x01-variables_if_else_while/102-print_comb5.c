@@ -8,39 +8,46 @@
  */
 int main(void)
 {
-	int num1 = 48;
+	int a = 48, b = 48, x = 48, y = 48;
 
-	while (num1 <= 57)
+	while (x <= 57)
 	{
-		int num2 = 48;
-
-		while (num2 <= 56)
+		if (x < a)
 		{
-			int num3 = 48;
-
-			while (num3 <= 57)
+			x++;
+			continue;
+		}
+		while (y <= 56)
+		{
+			if (y >= b)
 			{
-				int num4 = 48;
-
-				while (num4 <= 57)
+				b++;
+				continue;
+			}
+			while (a <= 57)
+			{
+				while (b <= 57)
 				{
-					putchar(num1);
-					putchar(num2);
+					putchar(x);
+					putchar(y);
 					putchar(' ');
-					putchar(num3);
-					putchar(num4);
-					if (num1 != 57 || num3 != 57 || num4 != 57)
+					putchar(a);
+					putchar(b);
+					if (a != 57 || b != 57 || x != 57 || y != 56)
 					{
 						putchar(',');
 						putchar(' ');
 					}
-					num4++;
+					b++;
 				}
-				num3++;
+				a++;
+				b = 48;
 			}
-			num2++;
+			a = 48;
+			y++;
 		}
-		num1++;
+		y = 48;
+		x++;
 	}
 	putchar('\n');
 	return (0);
