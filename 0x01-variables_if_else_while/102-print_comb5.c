@@ -1,5 +1,22 @@
 #include <stdio.h>
 /**
+ * printChar - print all possible number of 4 digits
+ * Description: the main function prints tow digits then space then
+ * then tho digit
+ * @x: first number
+ * @y: second number
+ * @a: third number
+ * @b: fourth number
+ */
+void printChar(int x, int y, int a, int b)
+{
+	putchar(x);
+	putchar(y);
+	putchar(' ');
+	putchar(a);
+	putchar(b);
+}
+/**
  * main - print all possible number of 4 digits
  * Description: the main function prints tow digits then space then
  * then tho digits num1 = 0-9 , num2 = 0-8 , num3 = 0-9 , num4 = 0-9.
@@ -28,11 +45,7 @@ int main(void)
 			{
 				while (b <= 57)
 				{
-					putchar(x);
-					putchar(y);
-					putchar(' ');
-					putchar(a);
-					putchar(b);
+					printChar(x, y, a, b);
 					if (a != 57 || b != 57 || x != 57 || y != 56)
 					{
 						putchar(',');
