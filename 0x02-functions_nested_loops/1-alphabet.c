@@ -1,7 +1,7 @@
 #include <stdio.h>
+#include <unistd.h>
 #include "main.h"
-void print_alphabet(void);
-
+int _putchar(char c);
 /**
  * main - the entry point function
  * Description: print alphaber
@@ -10,22 +10,26 @@ void print_alphabet(void);
  */
 int main(void)
 {
-	print_alphabet();
+	char x = 97;
+	char y = 10;
+
+	while (x <= 122)
+	{
+		_putchar(x);
+		x++;
+	}
+	_putchar(y);
 	return (0);
 }
 
 /**
- * print_alphabet - for printing alphabet
- * Description: it prints lower alphabet case followed by a new line
+ * _putchar - writes the character c to stdout
+ * @c: The character to print
+ *
+ * Return: On success 1.
+ * On error, -1 is returned, and errno is set appropriately.
  */
-void print_alphabet(void)
+int _putchar(char c)
 {
-	int x = 97;
-
-	while (x <= 122)
-	{
-		putchar(x);
-		x++;
-	}
-	putchar('\n');
+	return (write(1, &c, 1));
 }
