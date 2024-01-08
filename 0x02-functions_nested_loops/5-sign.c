@@ -1,7 +1,7 @@
 #include "main.h"
 /**
  * print_sign - check number
- * Description: combare n with 0 
+ * Description: combare n with0
  * @n: numer to be checked
  *
  * Return: 1 if its positive -1 if negative else 0
