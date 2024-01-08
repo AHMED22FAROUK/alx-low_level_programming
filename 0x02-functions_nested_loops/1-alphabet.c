@@ -1,13 +1,10 @@
-#include <unistd.h>
 #include "main.h"
 
 /**
- * main - the entry point function
+ * print_alphabet - the entry point function
  * Description: print alphaber
- *
- * Return: return 0
  */
-int main(void)
+void print_alphabet(void)
 {
 	char x = 97;
 	char y = 10;
@@ -18,5 +15,4 @@ int main(void)
 		x++;
 	}
 	_putchar(y);
-	return (0);
 }
