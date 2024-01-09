@@ -2,7 +2,7 @@
 
 /**
  * print_var - print 2 variable
- * Description: print 2 variables and :
+ * Description: print 2 variables
  * @x: a variable being printed
  * @y: a variable bieng printed
  *
@@ -60,7 +60,14 @@ void jack_bauer(void)
 		a++;
 	}
 }
-
+/**
+ * print_var - print 2 var
+ * Description: print a colon and 2 variables
+ * @x: 1 var
+ * @y: 1 var
+ *
+ * Return: return 0
+ */
 int print_var(int x, int y)
 {
 	_putchar(x);
