@@ -15,6 +15,7 @@ void times_table(void)
 	while (i <= 9)
 	{
 		int y = 0;
+
 		while (y <= 9)
 		{
 			int z = i * y;
@@ -78,6 +79,7 @@ void times_table(void)
 int asky(int s)
 {
 	int i = 48;
+
 	while (i <= 57)
 	{
 		if (s == i - 48)
