@@ -10,10 +10,12 @@ int asky(int s);
 void times_table(void)
 {
 	int inc = 0;
+	int i = 0;
 
-	for (int i = 0; i <= 9; i++)
+	while (i <= 9)
 	{
-		for (int y = 0; y <= 9; y++)
+		int y = 0;
+		while (y <= 9)
 		{
 			int z = i * y;
 
@@ -29,8 +31,10 @@ void times_table(void)
 				_putchar(s);
 				if (y == 9)
 				{
+					y++;
 					continue;
 				}
+				y++;
 				_putchar(',');
 			}
 			else if ((z <= 9 && z > 0) || (inc >= 1 && inc <= 9))
@@ -42,21 +46,25 @@ void times_table(void)
 				if (inc == 9 || inc == 19)
 				{
 					_putchar(mud);
+					y++;
 				}
 				else
 				{
-				_putchar(mud);
-				_putchar(',');
+					_putchar(mud);
+					_putchar(',');
+					y++;
 				}
 			}
 			else
 			{
 				_putchar(48);
 				_putchar(',');
+				y++;
 			}
 			inc++;
 		}
 		_putchar('\n');
+		i++;
 	}
 }
 
@@ -69,12 +77,14 @@ void times_table(void)
  */
 int asky(int s)
 {
-	for (int i = 48; i <= 57; i++)
+	int i = 48;
+	while (i <= 57)
 	{
 		if (s == i - 48)
 		{
 			return (i);
 		}
+		i++;
 	}
 	return (-1);
 }
