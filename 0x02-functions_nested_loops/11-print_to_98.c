@@ -124,13 +124,28 @@ int seperate(int t)
 			_putchar(iden);
 			return (0);
 		}
-		else
+		else if ((-t) > 9 && (-t) <= 99)
 		{
 			second = (-t) % 10;
 			first = (-t) / 10;
 			x = asky(first);
 			y = asky(second);
 			_putchar('-');
+			_putchar(x);
+			_putchar(y);
+			return (0);
+		}
+		else
+		{
+			int fir = (-t) / 100;
+			int rs = asky(fir);
+
+			first = ((-t) % 100) / 10;
+			second = (((-t) % 100) % 10);
+			x = asky(first);
+			y = asky(second);
+			_putchar('-');
+			_putchar(rs);
 			_putchar(x);
 			_putchar(y);
 			return (0);
