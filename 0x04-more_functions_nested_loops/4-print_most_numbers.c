@@ -1,9 +1,9 @@
 #include "main.h"
 /**
- * print_numbers - prints number
+ * void print_most_numbers - prints number
  * Description: it prints numbers from 0 to 9 but not 2 or 4
  */
-void print_numbers(void)
+void print_most_numbers(void)
 {
 	int x = 48;
 
