@@ -27,7 +27,6 @@ int main(void)
 				i++;
 				continue;
 			}
-			continue;
 		}
 		if ((i % 5) == 0)
 		{
@@ -39,15 +38,10 @@ int main(void)
 				break;
 			}
 			putchar(' ');
-			i++;
 			continue;
 		}
 		printf("%d", i);
 		i++;
-		if (i == 101)
-		{
-			break;
-		}
 		putchar(' ');
 	}
 	return (0);
