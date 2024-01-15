@@ -1,8 +1,14 @@
 #include <stdio.h>
-
+/**
+ * main - print from 1 to 100
+ * Description: print fizz and buzz instead of 3 and 5
+ *
+ * Return: return 0 if success
+ */
 int main(void)
 {
 	int i = 1;
+
 	while (i <= 100)
 	{
 		if ((i % 3) == 0)
