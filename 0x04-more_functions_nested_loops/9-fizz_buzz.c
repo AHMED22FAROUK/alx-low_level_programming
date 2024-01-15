@@ -32,6 +32,12 @@ int main(void)
 		if ((i % 5) == 0)
 		{
 			printf("Buzz");
+			i++;
+			if (i == 101)
+			{
+				putchar('\n');
+				break;
+			}
 			putchar(' ');
 			i++;
 			continue;
@@ -44,6 +50,5 @@ int main(void)
 		}
 		putchar(' ');
 	}
-	putchar('\n');
 	return (0);
 }
