@@ -1,0 +1,14 @@
+#include "main.h"
+#include <string.h>
+void print_rev(char *s)
+{
+	int i = strlen(s);
+	int y;
+
+	for (y = 0; i != 0; y++)
+	{
+		i--;
+		_putchar(s[i]);
+	}
+	_putchar('\n');
+}
