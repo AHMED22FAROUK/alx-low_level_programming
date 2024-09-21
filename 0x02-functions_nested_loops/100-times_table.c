@@ -61,17 +61,20 @@ void check_last_number(int i, int n, int val)
 	}
 	else if (val < 10)
 	{
+		_putchar(',');
 		_putchar(' ');
 		_putchar(' ');
 		_putchar(' ');
 	}
 	else if (val >= 10 && val <= 99)
 	{
+		_putchar(',');
 		_putchar(' ');
 		_putchar(' ');
 	}
 	else
 	{
+		_putchar(',');
 		 _putchar(' ');
 	}
 }
