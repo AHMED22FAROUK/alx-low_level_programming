@@ -1,0 +1,51 @@
+#include "main.h"
+
+void check_last_number(int i, int n);
+void print_times_table(int num)
+{
+	if (num >= 0 && num <= 15)
+	{
+		int i, sec, value;
+
+		for (i = 0; i <= num; i++)
+		{
+			for (sec = 0; sec <= num; sec++)
+			{
+				value = sec * i;
+				if (value < 10)
+				{
+					_putchar(value + '0');
+					check_last_number(sec, num);
+				}
+				else if (value >= 10 && value < 100)
+				{
+					_putchar((value / 10) + '0');
+					_putchar((value % 10) + '0');
+					check_last_number(sec, num);
+				}
+				else
+				{
+					 _putchar((value / 100) + '0');
+					 _putchar(((value % 100) / 10) + '0');
+					 _putchar(((value % 100) % 10) + '0');
+					 check_last_number(sec, num);
+				}
+			}
+		}
+	}
+}
+
+void check_last_number(int i, int n)
+{
+	if (i == n)
+	{
+		_putchar('\n');
+	}
+	else
+	{
+		_putchar(',');
+		_putchar(' ');
+		_putchar(' ');
+		_putchar(' ');
+	}
+}
