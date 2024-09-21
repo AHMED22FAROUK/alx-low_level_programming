@@ -1,6 +1,6 @@
 #include "main.h"
 
-void check_last_number(int i, int n, int val);
+void check_last_number(int i, int num, int val);
 
 /**
  * print_times_table - a function prints the times table
@@ -23,21 +23,19 @@ void print_times_table(int n)
 				if (value < 10)
 				{
 					_putchar(value + '0');
-					check_last_number(sec, n, value);
 				}
 				else if (value >= 10 && value < 100)
 				{
 					_putchar((value / 10) + '0');
 					_putchar((value % 10) + '0');
-					check_last_number(sec, n, value);
 				}
-				else
+				else if (value >= 100)
 				{
-					 _putchar((value / 100) + '0');
-					 _putchar(((value % 100) / 10) + '0');
-					 _putchar(((value % 100) % 10) + '0');
-					 check_last_number(sec, n, value);
+					_putchar((value / 100) + '0');
+					_putchar(((value % 100) / 10) + '0');
+					_putchar(((value % 100) % 10) + '0');
 				}
+				check_last_number(sec, n, i);
 			}
 		}
 	}
@@ -47,34 +45,35 @@ void print_times_table(int n)
  * check_last_number - function check the last number in row
  * @i: the row number
  * @n: the times table number
- * @val: Multiplication number
+ * @val: col number
  * Description: this function checks if the last number to
  * be printed in the is equal the the times table number if
  * they are equal it will print new line and check the Multiplication
  * To determine how many spaces will print
  */
-void check_last_number(int i, int n, int val)
+void check_last_number(int i, int num, int val)
 {
-	if (i == n)
+	if (i == num)
 	{
 		_putchar('\n');
-	}
-	else if (val < 10)
-	{
-		_putchar(',');
-		_putchar(' ');
-		_putchar(' ');
-		_putchar(' ');
-	}
-	else if (val >= 10 && val <= 99)
-	{
-		_putchar(',');
-		_putchar(' ');
-		_putchar(' ');
 	}
 	else
 	{
 		_putchar(',');
-		 _putchar(' ');
+		if ((i * val) < 10)
+		{
+			_putchar(' ');
+			_putchar(' ');
+			_putchar(' ');
+		}
+		else if ((i * val) >= 10 && ((i + 1) * val) < 100)
+		{
+			_putchar(' ');
+			_putchar(' ');
+		}
+		else
+		{
+			_putchar(' ');
+		}
 	}
 }
