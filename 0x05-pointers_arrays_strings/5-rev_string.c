@@ -1,4 +1,5 @@
 #include "main.h"
+#include <string.h>
 /**
  * rev_string - reverse string
  * Description: reverse sttring
@@ -6,17 +7,14 @@
  */
 void rev_string(char *s)
 {
-	int i;
-	int y = 0;
-	char eer[10];
+	int n, i;
+	char t;
 
-	for (i = 0; i < 9; i++)
+	n = strlen(s);
+	for (i = 0; i < n / 2; i++)
 	{
-		eer[i] = s[i];
-	}
-	for (i = 8; i != -1; i--)
-	{
-		s[i] = eer[y];
-		y++;
+		t = s[i];
+		s[i] = s[n - i - 1];
+		s[n - i - 1] = t;
 	}
 }
