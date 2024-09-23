@@ -16,13 +16,21 @@ void puts_half(char *str)
 	{
 		for (n = si / 2; n <= si; n++)
 		{
+			if (str[n] == '\0')
+			{
+				break;
+			}
 			_putchar(str[n]);
 		}
 	}
 	else
 	{
-		for (n = (si - 1) / 2; n <= si; n++)
+		for (n = si / 2; n <= si; n++)
 		{
+			if (str[n] == '\0')
+			{
+				break;
+			}
 			_putchar(str[n]);
 		}
 	}
