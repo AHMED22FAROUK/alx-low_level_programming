@@ -2,7 +2,7 @@
 #include "main.h"
 
 /**
- * _strncat - function that connects string to another
+ * _strncpy - function that connects string to another
  * @dest: a pointer to the string will be connected
  * @src: a pointer to the string will be connected to
  * @n: thhe number of bytes to be concatenated
@@ -14,19 +14,15 @@
 
 char *_strncpy(char *dest, char *src, int n)
 {
-	int i, s, c;
+	int c;
 
-	i = strlen(dest);
-	s = strlen(src);
 	for (c = 0; c < n; c++)
 	{
-		dest[i] = src[c];
-		i++;
-		if (c == s)
-		{
-			dest[i] = '\0';
-			break;
-		}
+		dest[c] = src[c];
+	}
+	while (n > c)
+	{
+		dest[c] = '\0';
 	}
 	return (dest);
 }
