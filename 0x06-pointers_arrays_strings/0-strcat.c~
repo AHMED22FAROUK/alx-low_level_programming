@@ -1,0 +1,16 @@
+#include <string.h>
+#include "main.h"
+
+char *_strcat(char *dest, char *src)
+{
+	int i, s, c;
+
+	i = strlen(dest);
+	s = strlen(src);
+	for (c = 0; c <= s; c++)
+	{
+		dest[i] = src[c];
+		i++;
+	}
+	return (dest);
+}
