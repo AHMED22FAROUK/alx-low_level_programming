@@ -22,6 +22,11 @@ int _strcmp(char *s1, char *s2)
 		cmp2 = s2[i];
 		if (cmp1 == cmp2)
 		{
+			if (++i == k)
+			{
+				i = 0;
+				break;
+			}
 			continue;
 		}
 		else if (cmp1 > cmp2)
